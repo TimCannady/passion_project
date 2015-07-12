@@ -4,7 +4,6 @@ end
 
 get '/categories/:id' do # read one category
   @category = Category.find(params[:id])
-  p @category
   erb :'categories/categories_one'
 end
 

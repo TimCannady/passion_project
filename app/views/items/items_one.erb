@@ -1,0 +1,7 @@
+displays the profile for a specified item
+
+<%= @item[:name]%>
+
+<% @item.attributes.each do |key, value| %>
+  <p><%= value %></p>
+<% end %>

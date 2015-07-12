@@ -6,7 +6,6 @@ end
 
 get '/users/:id' do # read one user
   @user = User.find(params[:id])
-  p @user
   erb :'users/users_one'
 end
 
