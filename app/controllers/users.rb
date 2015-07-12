@@ -1,10 +1,11 @@
 get '/users/:id' do
-  # @user = User.find(params[:id])
-  erb :'user/user'
+  @user = User.find(params[:id])
+  p @user
+  erb :'user/user_one'
 end
 
 get '/users' do
-  # @all_users = User.all
+  @all_users = User.all
   erb :'user/users_all'
 end
 
