@@ -53,9 +53,8 @@
 <% end %>
 <!-- end logout -->
 
-
-
 <!-- default view -->
+<% if logged_in%>
 <div class="container">
   <h1>Passion Project</h1>
   <h3>Welcome, <%= @current_user[:first_name].capitalize%>!</h3>
@@ -71,4 +70,9 @@
     <br>
   </form>
 </div>
+<% end %>
 <!-- end default view -->
+
+
+
+
