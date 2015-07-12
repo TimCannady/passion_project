@@ -3,6 +3,8 @@ require 'bcrypt'
 class User < ActiveRecord::Base
   include BCrypt
   has_many :items
+  has_many :favoriters
+  has_many :favoritees
 
   def password
     @password ||= Password.new(password_hash)

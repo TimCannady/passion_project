@@ -6,6 +6,7 @@ end
 
 get '/users/:id' do # read one user
   @user = User.find(params[:id])
+  # @users_items = UsersItems.find(params[:id])
   erb :'users/users_one'
 end
 
