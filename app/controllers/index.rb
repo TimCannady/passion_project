@@ -8,11 +8,16 @@ end
 
 post '/users/create' do
   create_user
-  # login
+  login
   redirect '/'
 end
 
 post '/users/login' do
   login
+  redirect '/'
+end
+
+post '/users/logout' do
+  logout
   redirect '/'
 end
