@@ -1,0 +1,7 @@
+displays the profile for a specified user
+
+<%= @user[:first_name]%>
+
+<% @user.attributes.each do |key, value| %>
+  <p><%= value %></p>
+<% end %>

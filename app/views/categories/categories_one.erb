@@ -1,0 +1,7 @@
+displays the profile for a specified category
+
+<%= @category[:name]%>
+
+<% @category.attributes.each do |key, value| %>
+  <p><%= value %></p>
+<% end %>
