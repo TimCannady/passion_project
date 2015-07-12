@@ -1,0 +1,70 @@
+<!-- homepage login -->
+<% unless logged_in%>
+  <form id = "login" action="/users" method="post">Login:
+    <br>
+    <label for="email">Email: </label>
+    <input type="email" name="email" placeholder="yourname@email.com" required>
+    <input type="password" name="password_hash" placeholder="password" required>
+    <br>
+    <input type="submit" value="Login"></li>
+    <br>
+    <br>
+  </form>
+<% end %>
+<!-- end homepage login -->
+
+
+<!-- create account -->
+<% unless logged_in%>
+  <form id = "login" action="/users" method="post">Create An Account:
+    <br>
+    <label for="email">Email: </label>
+    <input type="email" name="email" placeholder="yourname@email.com" required>
+    <br>
+    <label for="password">Password: </label>
+    <input type="password" name="password_hash" placeholder="password" required>
+    <br>
+    <label for="first_name">First Name: </label>
+    <input type="text" name="first_name" placeholder="Jon" required>
+    <br>
+    <label for="last_name">Last Name: </label>
+    <input type="text" name="last_name" placeholder="Doe" required>
+    <br>
+    <label for="city">City: </label>
+    <input type="text" name="city" placeholder="San Francisco" required>
+    <br>
+    <label for="gender">Gender: </label>
+    <input type="text" name="gender" placeholder="male" required>
+    <br>
+    <input type="submit" value="Create Account"></li>
+    <br>
+  </form>
+<% end %>
+<!-- end create account -->
+
+<!-- logout -->
+<% if logged_in%>
+  <form id = "logout" action="/users/logout" method="post">Log Out:
+    <input type="submit" value="Log Out"></li>
+    <br>
+  </form>
+<% end %>
+<!-- end logout -->
+
+
+<div class="container">
+  <h1>Name</h1>
+  <p>Welcome!</p>
+
+  <form id = "link_shortener_form" action="/urls" method="post">
+    <label for="description">Enter a description: </label>
+    <input type="text" name="description">
+    <br>
+    <label for="users_long_url">Enter your link to shorten: </label>
+    <input type="text" name="users_long_url">
+    <br>
+    <input type="submit" value="SHORTANN!">
+    <br>
+  </form>
+
+</div>
