@@ -1,6 +1,4 @@
 # passion_project
-dbc passion project
+Muh passion proyecto
 
 ![schema logo](http://i.imgur.com/F06MHPQ.png)
-
-git push
