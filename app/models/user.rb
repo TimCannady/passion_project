@@ -1,3 +1,3 @@
-git class User < ActiveRecord::Base
-  # Remember to create a migration!
+class User < ActiveRecord::Base
+  has_many :items
 end
