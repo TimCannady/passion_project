@@ -6,7 +6,7 @@ end
 
 get '/users' do
   @all_users = User.all
-  erb :'user/users_all'
+  erb :'user/user_all'
 end
 
 post '/users' do
