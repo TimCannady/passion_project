@@ -1,10 +1,10 @@
 <!-- homepage login -->
 <% unless logged_in%>
-  <form id = "login" action="/users" method="post">Login:
+  <form id = "login" action="/users/login" method="post">Login:
     <br>
     <label for="email">Email: </label>
     <input type="email" name="email" placeholder="yourname@email.com" required>
-    <input type="password" name="password_hash" placeholder="password" required>
+    <input type="password" name="password" placeholder="password" required>
     <br>
     <input type="submit" value="Login"></li>
     <br>
@@ -16,13 +16,13 @@
 
 <!-- create account -->
 <% unless logged_in%>
-  <form id = "login" action="/users" method="post">Create An Account:
+  <form id = "login" action="/users/create" method="post">Create An Account:
     <br>
     <label for="email">Email: </label>
     <input type="email" name="email" placeholder="yourname@email.com" required>
     <br>
     <label for="password">Password: </label>
-    <input type="password" name="password_hash" placeholder="password" required>
+    <input type="password" name="password" placeholder="password" required>
     <br>
     <label for="first_name">First Name: </label>
     <input type="text" name="first_name" placeholder="Jon" required>
@@ -42,6 +42,9 @@
 <% end %>
 <!-- end create account -->
 
+
+
+
 <!-- logout -->
 <% if logged_in%>
   <form id = "logout" action="/users/logout" method="post">Log Out:
@@ -52,6 +55,9 @@
 <!-- end logout -->
 
 
+
+
+<!-- default view -->
 <div class="container">
   <h1>Name</h1>
   <p>Welcome!</p>
@@ -66,5 +72,5 @@
     <input type="submit" value="SHORTANN!">
     <br>
   </form>
-
 </div>
+<!-- end default view -->

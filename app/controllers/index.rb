@@ -3,6 +3,16 @@ get '/' do
 end
 
 post '/users' do
-  puts User.create(params)
-  # redirect '/'
+  erb :index
+end
+
+post '/users/create' do
+  create_user
+  # login
+  redirect '/'
+end
+
+post '/users/login' do
+  login
+  redirect '/'
 end
