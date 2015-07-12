@@ -1,17 +1,17 @@
 get '/users/:id' do
   @user = User.find(params[:id])
   p @user
-  erb :'user/user_one'
+  erb :'users/users_one'
 end
 
 get '/users' do
   @all_users = User.all
-  erb :'user/user_all'
+  erb :'users/users_all'
 end
 
-post '/users' do
-  erb :index
-end
+# post '/users' do
+#   erb :index
+# end
 
 post '/users/create' do
   create_user
