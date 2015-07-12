@@ -13,7 +13,6 @@
 <% end %>
 <!-- end homepage login -->
 
-
 <!-- create account -->
 <% unless logged_in%>
   <form id = "login" action="/users" method="post">Create An Account:
@@ -56,11 +55,10 @@
 
 
 
-
 <!-- default view -->
 <div class="container">
   <h1>Name</h1>
-  <p>Welcome!</p>
+  <p>Welcome <%= @current_user[:first_name%></p>
 
   <form id = "link_shortener_form" action="/urls" method="post">
     <label for="description">Enter a description: </label>
