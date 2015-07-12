@@ -1,6 +1,6 @@
 <!-- homepage login -->
 <% unless logged_in%>
-  <form id = "login" action="/users/login" method="post">Login:
+  <form id = "login" action="/sessions/login" method="post">Login:
     <br>
     <label for="email">Email: </label>
     <input type="email" name="email" placeholder="yourname@email.com" required>
@@ -16,7 +16,7 @@
 
 <!-- create account -->
 <% unless logged_in%>
-  <form id = "login" action="/users/create" method="post">Create An Account:
+  <form id = "login" action="/users" method="post">Create An Account:
     <br>
     <label for="email">Email: </label>
     <input type="email" name="email" placeholder="yourname@email.com" required>

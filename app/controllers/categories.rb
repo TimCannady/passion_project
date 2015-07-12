@@ -1,20 +1,22 @@
-get '/categories/:id' do
+post '/categories' do # create category
+  # create_category
+end
+
+get '/categories/:id' do # read one category
   @category = Category.find(params[:id])
   p @category
   erb :'categories/categories_one'
 end
 
-get '/categories' do
+get '/categories' do # read all categories
   @all_categories = Category.all
   erb :'categories/categories_all'
 end
 
-post '/categories/create' do
-  create_user
-  login
-  redirect '/'
+put '/categories' do # update category
+  # edit_category
 end
 
-# post '/categories' do
-#   erb :index
-# end
+delete '/category' do # delete category
+  # delete_category
+end

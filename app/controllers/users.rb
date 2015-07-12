@@ -1,30 +1,35 @@
-get '/users/:id' do
-  @user = User.find(params[:id])
-  p @user
-  erb :'users/users_one'
-end
-
-get '/users' do
-  @all_users = User.all
-  erb :'users/users_all'
-end
-
-# post '/users' do
-#   erb :index
-# end
-
-post '/users/create' do
+post '/users' do # create user
   create_user
   login
   redirect '/'
 end
 
-post '/users/login' do
+get '/users/:id' do # read one user
+  @user = User.find(params[:id])
+  p @user
+  erb :'users/users_one'
+end
+
+get '/users' do # read all users
+  @all_users = User.all
+  erb :'users/users_all'
+end
+
+put '/users' do # update user
+  # edit_user
+end
+
+delete '/users/:id' do # delete user
+  @user = User.find(params[:id])
+  @user.destroy
+end
+
+post '/sessions/login' do # login
   login
   redirect '/'
 end
 
-post '/users/logout' do
+post '/users/logout' do #logoiut
   logout
   redirect '/'
 end
