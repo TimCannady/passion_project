@@ -4,7 +4,6 @@ class CreateCategories < ActiveRecord::Migration
       t.string :name
       t.string :description
       t.string :photo_url
-      t.string :item_count
     end
   end
 end
