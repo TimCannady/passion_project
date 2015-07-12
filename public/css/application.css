@@ -51,6 +51,11 @@ body{
   border: 1px solid skyblue;
 }
 
+.item_img{
+  height: 100%;
+  border-radius: 50%;
+}
+
 .item_card {
   text-align: center;
   display: inline-block;
