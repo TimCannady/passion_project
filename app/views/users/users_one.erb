@@ -1,9 +1,34 @@
-displays the profile for a specified user
+<html>
+<head>
+  <title></title>
+</head>
 
-<%= @user[:first_name]%>
+<body>
+  <h2>User</h2>
 
-<% @user.attributes.each do |key, value| %>
-  <p><%= value %></p>
-<% end %>
+  <div id="user_wrapper"</div>
+    <div class="user_card">
+      <% @user.attributes.each do |key, value| %>
+        <p><%= key %>: <%= value %></p>
+      <% end %>
+    </div>
+  </div>
 
-<!-- display all the items they have in their db -->
+  <div id="all_items_wrapper"</div>
+    <% @all_items.each do |item| %>
+      <div class="item_card">
+        <% item.attributes.each do |key, value| %>
+          <p><%= key %>: <%= value %></p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+
+</body>
+
+</html>
+
+
+
+

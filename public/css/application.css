@@ -1,0 +1,54 @@
+html{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  position: relative;
+  margin: auto;
+  border: 1px solid black;
+  padding: 2%;
+  padding-top: 0;
+/*  height: 90%;*/
+  width: 95%;
+}
+
+#user_wrapper{
+  width: 100%;
+  position: relative;
+  border: 1px solid black;
+}
+
+#all_items_wrapper{
+  width: 100%;
+  position: relative;
+  border: 1px solid black;
+}
+
+.user_card {
+  font-size: 14px;
+  border: 1px solid skyblue;
+  padding: 2%;
+  margin: auto;
+  width: 50%;
+  margin-bottom: 1%;
+  border-radius: 20px;
+}
+
+.item_card {
+  display: inline-block;
+  position: relative;
+  border: 1px solid skyblue;
+  padding: 2%;
+  width: 10%;
+  height: 5%;
+  font-size: 14px;
+  margin-bottom: 1%;
+  border-radius: 20px;
+  line-height: 90%;
+}
+
+.item_card p {
+  color: orange;
+}
+

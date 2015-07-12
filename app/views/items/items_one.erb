@@ -1,7 +1,8 @@
-displays the profile for a specified item
+displays the item card for a specified item
 
-<%= @item[:name]%>
-
-<% @item.attributes.each do |key, value| %>
-  <p><%= value %></p>
-<% end %>
+<div class="item_card">
+  <%= @item[:name]%>
+  <% @item.attributes.each do |key, value| %>
+    <p><%= value %></p>
+  <% end %>
+</div>
