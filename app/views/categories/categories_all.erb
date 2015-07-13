@@ -1,6 +1,32 @@
-displays a list of all the categories
+<%= erb :'partials/_navbar' %> <!-- navbar partial -->
+
+<html>
+<head>
+  <title></title>
+</head>
+
+<body>
+  <div id="category_card_wrapper"</div>
+      <div class="category_card_image">
+        <img id="category_img" src="/imgs/categories.jpg">
+      </div>
+
+  </div>
+
+  <div id="all_items_wrapper"</div>
+    <% @all_categories.each do |item| %>
+      <div class="item_card">
+        <img class="item_card_img" src="<%= item[:photo_url]%>">
+        <p><%= item[:name] %> </p>
+      </div>
+    <% end %>
+  </div>
 
 
-<% @all_categories.each do |category| %>
-  <p> <%= category[:name] %> </p>
-<% end %>
+</body>
+
+</html>
+
+
+
+

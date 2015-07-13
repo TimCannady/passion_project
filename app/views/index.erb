@@ -44,31 +44,6 @@
 
 
 
-<!-- logout -->
-<% if logged_in%>
-  <form id = "logout" action="/users/logout" method="post">Log Out:
-    <input type="submit" value="Log Out"></li>
-    <br>
-  </form>
-<% end %>
-<!-- end logout -->
 
 
 
-<!-- default view -->
-<div class="container">
-  <h1>Passion Project</h1>
-  <h3>Welcome, <%= @current_user[:first_name].capitalize%>!</h3>
-
-  <form id = "link_shortener_form" action="/urls" method="post">
-    <label for="description">Enter a description: </label>
-    <input type="text" name="description">
-    <br>
-    <label for="users_long_url">Enter your link to shorten: </label>
-    <input type="text" name="users_long_url">
-    <br>
-    <input type="submit" value="SHORTANN!">
-    <br>
-  </form>
-</div>
-<!-- end default view -->

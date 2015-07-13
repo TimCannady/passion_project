@@ -12,6 +12,11 @@ get '/items' do # read all items
   erb :'items/items_all'
 end
 
+get '/categories/:id/items' do # read all items from a specific category
+  # @all_items = Item.where(#category = :id )
+  # erb :'items/items_all'
+end
+
 put '/items' do # update item
   # edit_item
 end

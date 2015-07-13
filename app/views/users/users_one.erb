@@ -1,25 +1,28 @@
+<%= erb :'partials/_navbar' %> <!-- navbar partial -->
+
 <html>
 <head>
   <title></title>
 </head>
 
 <body>
-  <h2>User</h2>
+  <div id="user_card_wrapper"</div>
+      <div class="user_card_image">
+        <img id="user_img" src="/imgs/headshot.jpg">
+      </div>
 
-  <div id="user_wrapper"</div>
-    <div class="user_card">
-      <% @user.attributes.each do |key, value| %>
-        <p><%= key %>: <%= value %></p>
-      <% end %>
-    </div>
+      <div class="user_card_text"
+        <% @user.attributes.each do |key, value| %>
+          <p><%= key %>: <%= value %></p>
+        <% end %>
+      </div>
   </div>
 
   <div id="all_items_wrapper"</div>
     <% @all_items.each do |item| %>
       <div class="item_card">
-        <% item.attributes.each do |key, value| %>
-          <p><%= key %>: <%= value %></p>
-        <% end %>
+        <img class="item_card_img" src="<%= item[:photo_url]%>">
+        <p><%= item[:name] %> </p>
       </div>
     <% end %>
   </div>
