@@ -8,7 +8,8 @@
 <body>
   <div id="user_card_wrapper"</div>
       <div class="user_card_image">
-        <img id="user_img" src="/imgs/headshot.jpg">
+        <!-- <img id="user_img" src="/imgs/headshot.jpg"> -->
+        <img id="user_img" src='<%= "#{establish_current_user[:photo_url]}" %>'>
       </div>
 
       <div class="user_card_text"
