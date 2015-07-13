@@ -1,0 +1,14 @@
+<% if logged_in%>
+  <form id = "logout" action="/users/logout" method="post">
+    <input type="submit" value="Log Out"></li>
+  </form>
+  <form id = "users" action="/users" method="get">
+    <input type="submit" value="Users"></li>
+  </form>
+  <form id = "categories" action="/categories" method="get">
+    <input type="submit" value="Categories"></li>
+  </form>
+  <form id = "items" action="/items" method="get">
+    <input type="submit" value="Items"></li>
+  </form>
+<% end %>

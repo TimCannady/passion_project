@@ -30,7 +30,7 @@ post '/sessions/login' do # login
   redirect '/'
 end
 
-post '/users/logout' do #logoiut
+post '/users/logout' do #logout
   logout
   redirect '/'
 end

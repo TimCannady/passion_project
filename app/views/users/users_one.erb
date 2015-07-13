@@ -1,4 +1,5 @@
-<%= erb :'partials/_logout' %> <!-- logout partial -->
+<%= erb :'partials/_navbar' %> <!-- navbar partial -->
+
 <html>
 <head>
   <title></title>
@@ -20,7 +21,7 @@
   <div id="all_items_wrapper"</div>
     <% @all_items.each do |item| %>
       <div class="item_card">
-        <img class="item_img" src="<%= item[:photo_url]%>">
+        <img class="item_card_img" src="<%= item[:photo_url]%>">
         <p><%= item[:name] %> </p>
       </div>
     <% end %>
