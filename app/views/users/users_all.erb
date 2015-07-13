@@ -1,9 +1,31 @@
 <%= erb :'partials/_navbar' %> <!-- navbar partial -->
 
-displays a list of all the users
+<html>
+<head>
+  <title></title>
+</head>
+
+<body>
+  <div id="user_card_wrapper"</div>
+      <div class="user_card_image">
+        <img id="user_img" src="/imgs/users.jpg">
+      </div>
+  </div>
+
+  <div id="all_items_wrapper"</div>
+    <% @all_users.each do |user| %>
+      <div class="item_card">
+        <img class="item_card_img" src="<%= user[:photo_url]%>">
+        <p><%= user[:name] %> </p>
+      </div>
+    <% end %>
+  </div>
 
 
-<% @all_users.each do |user| %>
-  <p> <%= user[:first_name] %> </p>
-<% end %>
+</body>
+
+</html>
+
+
+
 
